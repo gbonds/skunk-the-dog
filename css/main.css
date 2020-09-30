@@ -180,6 +180,10 @@ h1 {
   background-color: hsla(220, 100%, 85%);
 }
 
+.color-white {
+  background-color: white;
+}
+
 /* ---------- Base Nav Styles ---------- */
 
 nav ul {
@@ -227,6 +231,21 @@ nav a:hover {
 
 .border-light-top {
   border-top: 1.5px solid #2a2a2a;
+}
+
+.home-link img {
+  width: 85%;
+  margin: 1.25em 0 0 .5em;
+  transform: rotate(5deg)
+}
+
+.home-link a:hover {
+  /* TODO update home-link specific motions */
+}
+
+.home-link img:hover {
+  transform: scale(1.01) rotate(7deg);
+  transition-duration: 0.2s;
 }
 
 /* ---------- Base Footer Styles ---------- */
