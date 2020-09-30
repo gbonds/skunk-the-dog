@@ -16,50 +16,69 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="color-3-light">
 
   <header>
     <nav>
-      <li>
-        <a href="../about/index.html">about</a>
-      </li>
-      <li>
-        <a href="../social/index.html">social</a>
-      </li>
-      <li>
-        <a href="../index.html">
-          <img src="../img/skunk_outdoors_01_headcrop.png" alt="home">
+      <ul>
+        <!-- temporarily removing to format simple nav bar
+        <li>
+          <a href="../index.html">
+            <img src="../img/skunk_outdoors_01_headcrop.png" alt="home">
+          </a>
+        </li> -->
+        <a href="../about/index.html" class="color-1">
+          <li>
+            about
+          </li>
         </a>
-      </li>
-      <li>
-        <a href="../contact/index.html">contact</a>
-      </li>
+        <a href="../social/index.html" class="color-2">
+          <li>
+            social
+          </li>
+        </a>
+        <a href="../work/index.html" class="color-3">
+          <li>
+            work
+          </li>
+        </a>
+        <a href="../contact/index.html" class="color-4">
+          <li>
+            contact
+          </li>
+        </a>
       </ul>
     </nav>
   </header>
 
   <main>
     <h1>Work</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-    <ul>
-      <li>example</li>
-      <li>example</li>
-      <li>example</li>
-    </ul>
-    <button>
-      Contact me to learn more
+    <div class="content-container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      <ul>
+        <li>example</li>
+        <li>example</li>
+        <li>example</li>
+      </ul>
+    </div> <!-- content-container ends -->
+    <button class="color-3">
+      Contact me to <br>
+      learn more
     </button>
   </main>
 
   <footer>
     <div class="copyright">
-      <p>Copyright 2020  |  <a href="http://www.gracebonds.com/" target="_new">Grace Bonds</a></p>
+      <p>Copyright 2020 | <a href="http://www.gracebonds.com/" target="_new">Grace Bonds</a></p>
     </div>
   </footer>
 

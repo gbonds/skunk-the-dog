@@ -87,6 +87,139 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* ----- Clearing Format Styles ----- */
+
+h1, h2, h3, h4, p, figure {
+  margin: 0;
+  /* overrides default margins */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  /* overrides default margin and padding on lists */
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ----- Global Layout Styles ----- */
+
+main {
+  margin: 50px 25px 100px 25px;
+  text-align: center;
+}
+
+/* ----- Typography & Coloring Styles ----- */
+
+body {
+  font: 300 16px 'Roboto', sans-serif;
+  color: #2a2a2a;
+}
+
+h1 {
+  font: 700 3em 'Balsamiq Sans', cursive;
+}
+
+.color-1 {
+  background-color: hsl(45, 100%, 50%);
+}
+  .color-1-light {
+    background-color: hsl(45, 100%, 85%);
+  }
+  /* setting this color for better contrast with white text */
+  .color-1-dark {
+    background-color: hsl(45, 85%, 50%);
+  }
+
+.color-2 {
+  background-color: hsl(80, 66%, 36%);
+}
+  .color-2-light {
+    background-color: hsl(80, 66%, 85%);
+  }
+
+.color-3 {
+  background-color: hsl(0, 70%, 45%);
+}
+  .color-3-light {
+    background-color: hsl(0, 70%, 85%);
+  }
+
+.color-4 {
+  background-color: hsl(220, 100%, 70%);
+}
+  .color-4-light {
+    background-color: hsla(220, 100%, 85%);
+  }
+
+
+
+/* ---------- Base Nav Styles ---------- */
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* this nav ul border evens out the border-width of the outer nav items */
+  border-width: 0 1px;
+  border-style: solid;
+  border-color: #2a2a2a;
+}
+
+nav a {
+  /* breaking out separate border stylings so I can specify width on top and sides */
+  border-width: 2.5px 1.5px;
+  border-style: solid;
+  border-color: #2a2a2a;
+  width: 25%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 400 1em 'Roboto', sans-serif;
+}
+
+/* ---------- Base Footer Styles ---------- */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .75em
+}
+
+/* ---------- Base Pages Styles ---------- */
+/* ---------- [About, Social, Work, Contact] 
+              Homepage Styles are farther below since it's more specific ---------- */
+
+main h1 {
+ margin-bottom: 25px;
+}
+
+.content-container {
+  margin: 25px 0;
+}
+
+button {
+  width: 50%;
+  padding: 10px;
+  color: white;
+  border: 2px solid #2a2a2a;
+  /* font: 400 1.125em 'Balsamiq Sans', cursive; */
+  /* I can't decide between using Balsamiq or Roboto for buttons, leaving Roboto active */
+  font: 400 1.25em 'Roboto', sans-serif;
+  border-radius: 4px;
+}
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
