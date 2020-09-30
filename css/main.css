@@ -1,6 +1,7 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -56,12 +57,7 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+audio, canvas, iframe, img, svg, video {
   vertical-align: middle;
 }
 
@@ -114,6 +110,7 @@ a {
 html, body {
   height: 100%;
   /* above rule helps footer stick to bottom */
+  /* source for sticky footer code: https://css-tricks.com/couple-takes-sticky-footer/ */
 }
 
 body {
@@ -148,36 +145,40 @@ h1 {
 .color-1 {
   background-color: hsl(45, 100%, 50%);
 }
-  .color-1-light {
-    background-color: hsl(45, 100%, 85%);
-  }
-  /* setting this color for better contrast with white text */
-  .color-1-dark {
-    background-color: hsl(45, 85%, 50%);
-  }
+
+.color-1-light {
+  background-color: hsl(45, 100%, 85%);
+}
+
+/* setting this color for better contrast with white text */
+
+.color-1-dark {
+  background-color: hsl(45, 85%, 50%);
+}
 
 .color-2 {
   background-color: hsl(80, 66%, 36%);
 }
-  .color-2-light {
-    background-color: hsl(80, 66%, 85%);
-  }
+
+.color-2-light {
+  background-color: hsl(80, 66%, 85%);
+}
 
 .color-3 {
   background-color: hsl(0, 70%, 45%);
 }
-  .color-3-light {
-    background-color: hsl(0, 70%, 85%);
-  }
+
+.color-3-light {
+  background-color: hsl(0, 70%, 85%);
+}
 
 .color-4 {
   background-color: hsl(220, 100%, 70%);
 }
-  .color-4-light {
-    background-color: hsla(220, 100%, 85%);
-  }
 
-
+.color-4-light {
+  background-color: hsla(220, 100%, 85%);
+}
 
 /* ---------- Base Nav Styles ---------- */
 
@@ -204,6 +205,14 @@ nav a {
   font: 400 1em 'Roboto', sans-serif;
 }
 
+nav a:hover {
+  transform: scale(1.05,1.25);
+  transition-duration: 0.2s;
+  border-radius: 2px;
+  border: none;
+  /* TODO how can I remove border without affecting alignment of neighboring nav item? */
+}
+
 .border-heavy-left {
   border-left: 2.5px solid #2a2a2a;
 }
@@ -221,6 +230,7 @@ nav a {
 }
 
 /* ---------- Base Footer Styles ---------- */
+
 /* ----- See "Global Layout Styles" section for rules making footer stick to bottom ---- */
 
 footer {
@@ -230,6 +240,7 @@ footer {
   font-size: .75em;
   margin-bottom: 15px;
 }
+
 .site-name {
   font: 400 1em 'Balsamiq Sans', cursive;
 }
@@ -249,13 +260,13 @@ footer .author-name a:active {
 
 /* TODO should I apply the link styling to all links? */
 
-
 /* ---------- Base Pages Styles ---------- */
+
 /* ---------- [About, Social, Work, Contact] 
               Homepage Styles are farther below since it's more specific ---------- */
 
 main h1 {
- margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .content-container {
@@ -274,6 +285,7 @@ button {
 }
 
 /* ---------- Base Homepage Styles ---------- */
+
 /* ---------- Styling for all other pages is above ---------- */
 
 #homepage-hero {
@@ -294,6 +306,11 @@ button {
   margin: 15px;
 }
 
+#homepage-hero img:hover {
+  transform: scale(1.01) rotate(2deg);
+  transition-duration: 0.2s;
+}
+
 #homepage-nav {
   margin-bottom: 75px;
 }
@@ -308,8 +325,6 @@ button {
   width: 48%;
 }
 
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -318,8 +333,7 @@ button {
  * Hide visually and from screen readers
  */
 
-.hidden,
-[hidden] {
+.hidden, [hidden] {
   display: none !important;
 }
 
@@ -351,8 +365,7 @@ button {
  * https://www.drupal.org/node/897638
  */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
+.sr-only.focusable:active, .sr-only.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -382,8 +395,7 @@ button {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix::before,
-.clearfix::after {
+.clearfix::before, .clearfix::after {
   content: " ";
   display: table;
 }
@@ -402,10 +414,7 @@ button {
   /* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 
@@ -416,48 +425,36 @@ button {
    ========================================================================== */
 
 @media print {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     background: #fff !important;
     color: #000 !important;
     /* Black prints faster */
     box-shadow: none !important;
     text-shadow: none !important;
   }
-
-  a,
-  a:visited {
+  a, a:visited {
     text-decoration: underline;
   }
-
   a[href]::after {
     content: " (" attr(href) ")";
   }
-
   abbr[title]::after {
     content: " (" attr(title) ")";
   }
-
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
+  a[href^="#"]::after, a[href^="javascript:"]::after {
     content: "";
   }
-
   pre {
     white-space: pre-wrap !important;
   }
-
-  pre,
-  blockquote {
+  pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
-
   /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -465,22 +462,14 @@ button {
   thead {
     display: table-header-group;
   }
-
-  tr,
-  img {
+  tr, img {
     page-break-inside: avoid;
   }
-
-  p,
-  h2,
-  h3 {
+  p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
-
-  h2,
-  h3 {
+  h2, h3 {
     page-break-after: avoid;
   }
 }
-
