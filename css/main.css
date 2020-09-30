@@ -111,9 +111,27 @@ a {
 
 /* ----- Global Layout Styles ----- */
 
+html, body {
+  height: 100%;
+  /* above rule helps footer stick to bottom */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* above 2 rules help footer stick to bottom */
+}
+
 main {
+  flex: 1 0 auto;
+  /* above rule helps footer stick to bottom */
   margin: 50px 25px 100px 25px;
   text-align: center;
+}
+
+footer {
+  flex-shrink: 0;
+  /* above rule helps footer stick to bottom */
 }
 
 /* ----- Typography & Coloring Styles ----- */
@@ -203,12 +221,14 @@ nav a {
 }
 
 /* ---------- Base Footer Styles ---------- */
+/* ----- See "Global Layout Styles" section for rules making footer stick to bottom ---- */
 
 footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   font-size: .75em;
+  margin-bottom: 15px;
 }
 .site-name {
   font: 400 1em 'Balsamiq Sans', cursive;
