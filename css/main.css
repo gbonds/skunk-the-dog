@@ -168,9 +168,9 @@ nav ul {
   justify-content: space-around;
   align-items: center;
   /* this nav ul border evens out the border-width of the outer nav items */
-  border-width: 0 1px;
+  /* border-width: 0 1px;
   border-style: solid;
-  border-color: #2a2a2a;
+  border-color: #2a2a2a; */
 }
 
 nav a {
@@ -184,6 +184,22 @@ nav a {
   justify-content: center;
   align-items: center;
   font: 400 1em 'Roboto', sans-serif;
+}
+
+.border-heavy-left {
+  border-left: 2.5px solid #2a2a2a;
+}
+
+.border-heavy-right {
+  border-right: 2.5px solid #2a2a2a;
+}
+
+.border-light-bottom {
+  border-bottom: 1.5px solid #2a2a2a;
+}
+
+.border-light-top {
+  border-top: 1.5px solid #2a2a2a;
 }
 
 /* ---------- Base Footer Styles ---------- */
@@ -217,7 +233,42 @@ button {
   font: 400 1.25em 'Roboto', sans-serif;
   border-radius: 4px;
 }
+
+/* ---------- Base Homepage Styles ---------- */
+/* ---------- Styling for all other pages is above ---------- */
+
+#homepage-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
+
+#homepage-hero h1 {
+  font-size: 13vw;
+  text-align: center;
+  margin: 15px;
+}
+
+#homepage-hero img {
+  width: 85%;
+  margin: 15px;
+}
+
+#homepage-nav {
+  margin-bottom: 75px;
+}
+
+#homepage-nav ul {
+  margin: 15px;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+#homepage-nav a {
+  width: 48%;
+}
+
 
 
 /* ==========================================================================

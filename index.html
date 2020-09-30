@@ -22,41 +22,54 @@
   <meta name="theme-color" content="#fafafa">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Roboto:wght@100;300;400&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
   <header>
-    <h1>Skunk the Dog</h1> 
-    <!-- TODO insert breaks here, have them not display in mobile, then display in desktop-->
-    <img src="img/skunk_outdoors_01_headcrop.png" alt="Skunk the Dog's smiling face">
+    <div class="content-container" id="homepage-hero">
+      <h1>Skunk the Dog</h1>
+      <!-- TODO insert breaks here, have them not display in mobile, then display in desktop-->
+      <img src="img/skunk_outdoors_01_headcrop.png" alt="Skunk the Dog's smiling face">
+    </div>
     <nav id="homepage-nav">
       <ul>
-        <li>
-          <a href="about/index.html">about</a>
-        </li>
-        <li>
-          <a href="social/index.html">social</a>
-        </li>
-        <li>
-          <a href="work/index.html">work</a>
-        </li>
-        <li>
-          <a href="contact/index.html">contact</a>
-        </li>
+        <a href="about/index.html" class="color-1 border-heavy-left border-light-bottom">
+          <li>
+            about
+          </li>
+        </a>
+        <a href="social/index.html" class="color-2 border-heavy-right border-light-bottom">
+          <li>
+            social
+          </li>
+        </a>
+        <a href="work/index.html" class="color-3 border-heavy-left border-light-top">
+          <li>
+            work
+          </li>
+        </a>
+        <a href="contact/index.html" class="color-4 border-heavy-right border-light-top">
+          <li>
+            contact
+          </li>
+        </a>
       </ul>
     </nav>
   </header>
 
   <footer>
     <div class="copyright">
-      <p>Copyright 2020  |  <a href="http://www.gracebonds.com/" target="_new">Grace Bonds</a></p>
+      <p>Copyright 2020 | <a href="http://www.gracebonds.com/" target="_new">Grace Bonds</a></p>
     </div>
   </footer>
 
 
-  <div> <!-- boilerplate script for js -->
+  <div>
+    <!-- boilerplate script for js -->
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
