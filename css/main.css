@@ -206,10 +206,29 @@ nav a {
 
 footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  font-size: .75em
+  font-size: .75em;
 }
+.site-name {
+  font: 400 1em 'Balsamiq Sans', cursive;
+}
+
+footer .author-name a {
+  text-decoration: underline;
+}
+
+footer .author-name a:hover {
+  color: hsl(220, 75%, 50%);
+  /* this color is slightly darker than the standard blue */
+}
+
+footer .author-name a:active {
+  font-weight: 400;
+}
+
+/* TODO should I apply the link styling to all links? */
+
 
 /* ---------- Base Pages Styles ---------- */
 /* ---------- [About, Social, Work, Contact] 
