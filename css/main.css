@@ -150,10 +150,9 @@ h1 {
   background-color: hsl(45, 100%, 85%);
 }
 
-/* setting this color for better contrast with white text */
-
 .color-1-dark {
   background-color: hsl(45, 85%, 50%);
+  /* setting this above color for better contrast with white text */
 }
 
 .color-2 {
@@ -190,19 +189,15 @@ nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* this nav ul border evens out the border-width of the outer nav items */
-  /* border-width: 0 1px;
-  border-style: solid;
-  border-color: #2a2a2a; */
 }
 
 nav a {
-  /* breaking out separate border stylings so I can specify width on top and sides */
+  /* breaking out border stylings below so I can specify width on top and sides */
   border-width: 2.5px 1.5px;
   border-style: solid;
   border-color: #2a2a2a;
   width: 25%;
-  height: 50px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,11 +205,11 @@ nav a {
 }
 
 nav a:hover {
-  transform: scale(1.05,1.25);
+  transform: scale(1.05, 1.25);
   transition-duration: 0.2s;
   border-radius: 2px;
   border: none;
-  /* TODO how can I remove border without affecting alignment of neighboring nav item? */
+  /* TODO how can I remove border and transform element without affecting alignment of neighboring nav item? */
 }
 
 .border-heavy-left {
@@ -234,18 +229,24 @@ nav a:hover {
 }
 
 .home-link img {
+  /* WORKING */
   width: 85%;
+  max-width: 90px;
   margin: 1.25em 0 0 .5em;
   transform: rotate(5deg)
 }
 
 .home-link a:hover {
-  /* TODO update home-link specific motions */
+  /* TODO is there a way to prevent this particular nav item from scaling? apparently scaling affects all child elements. 
+  code below DID NOT have any effect. */
+  /* transform: scale(0,0);
+  border-radius: 0;
+  border: 2.5px solid #2a2a2a; */
 }
 
 .home-link img:hover {
-  transform: scale(1.01) rotate(7deg);
-  transition-duration: 0.2s;
+  /* transform: scale(1.01) rotate(7deg);
+  transition-duration: 0.2s; */
 }
 
 /* ---------- Base Footer Styles ---------- */
