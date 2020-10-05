@@ -459,6 +459,7 @@ button {
               Homepage Styles are farther below since it's more specific ---------- */
   main {
     margin: 75px 150px;
+    justify-content: flex-start;
   }
   .content-container {
     max-width: 700px;
