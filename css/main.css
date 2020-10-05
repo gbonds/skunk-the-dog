@@ -120,8 +120,12 @@ body {
 }
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   flex: 1 0 auto;
-  /* above rule helps footer stick to bottom */
+  /* above 1 rule helps footer stick to bottom */
   margin: 50px 25px 100px 25px;
   text-align: center;
 }
@@ -229,11 +233,10 @@ nav a:hover {
 }
 
 .home-link img {
-  /* WORKING */
   width: 85%;
   max-width: 90px;
   margin: 1.25em 0 0 .5em;
-  transform: rotate(5deg)
+  /* transform: rotate(5deg) */
 }
 
 .home-link a:hover {
@@ -255,10 +258,18 @@ nav a:hover {
 
 footer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content-container {
+  display: flex;
   justify-content: space-evenly;
   align-items: center;
   font-size: .75em;
   margin-bottom: 15px;
+  width: 90%;
+  max-width: 500px;
 }
 
 .site-name {
@@ -269,6 +280,7 @@ footer .author-name a {
   text-decoration: underline;
 }
 
+footer .site-name a:hover,
 footer .author-name a:hover {
   color: hsl(220, 75%, 50%);
   /* this color is slightly darker than the standard blue */
@@ -294,7 +306,9 @@ main h1 {
 }
 
 button {
-  width: 50%;
+  width: 75%;
+  max-width: 175px;
+  margin: 25px 0;
   padding: 10px;
   color: white;
   border: 2px solid #2a2a2a;
@@ -431,7 +445,29 @@ button {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+  /* Tablet Styles */
+  /* ---------- Tablet Nav Styles ---------- */
+  nav a {
+    font-size: 1.25em;
+  }
+  .home-link img {
+    width: 100%;
+    margin: .75em 0 0 0;
+  }
+  /* ---------- Tablet Footer Styles ---------- */
+  /* ---------- Tablet Pages Styles ---------- */
+  /* ---------- [About, Social, Work, Contact] 
+              Homepage Styles are farther below since it's more specific ---------- */
+  main {
+    margin: 75px 150px;
+  }
+  .content-container {
+    max-width: 700px;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  /* ---------- Tablet Homepage Styles ---------- */
 }
 
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
