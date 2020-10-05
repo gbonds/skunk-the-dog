@@ -280,8 +280,7 @@ footer .author-name a {
   text-decoration: underline;
 }
 
-footer .site-name a:hover,
-footer .author-name a:hover {
+footer .site-name a:hover, footer .author-name a:hover {
   color: hsl(220, 75%, 50%);
   /* this color is slightly darker than the standard blue */
 }
@@ -301,7 +300,7 @@ main h1 {
   margin-bottom: 25px;
 }
 
-.content-container {
+.content-container, .header-content-container {
   margin: 25px 0;
 }
 
@@ -322,25 +321,25 @@ button {
 
 /* ---------- Styling for all other pages is above ---------- */
 
-#homepage-hero {
+.homepage-content-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
 }
 
-#homepage-hero h1 {
+.homepage-content-container h1 {
   font-size: 13vw;
   text-align: center;
   margin: 15px;
 }
 
-#homepage-hero img {
+.homepage-content-container img {
   width: 85%;
   margin: 15px;
 }
 
-#homepage-hero img:hover {
+.homepage-content-container img:hover {
   transform: scale(1.01) rotate(2deg);
   transition-duration: 0.2s;
 }
@@ -444,7 +443,8 @@ button {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 1030px) {
+  /* NOTE set min-width to 1030px b/c homepage nav items weren't lining up in row between 768-1024px width */
   /* Tablet Styles */
   /* ---------- Tablet Nav Styles ---------- */
   nav a {
@@ -454,7 +454,6 @@ button {
     width: 100%;
     margin: .75em 0 0 0;
   }
-  /* ---------- Tablet Footer Styles ---------- */
   /* ---------- Tablet Pages Styles ---------- */
   /* ---------- [About, Social, Work, Contact] 
               Homepage Styles are farther below since it's more specific ---------- */
@@ -468,64 +467,87 @@ button {
     font-size: 4em;
   }
   /* ---------- Tablet Homepage Styles ---------- */
-}
-
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
+  .homepage-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row-reverse;
+    /* max-width: 1600px; */
+    /* TODO how to prevent container from getting too big, while also centering content? 
+    might need to add another div layer. */
+  }
+  .homepage-content-container h1 {
+    font-size: 7vw;
+    text-align: left;
+    margin-left: 50px;
+  }
+  .homepage-content-container img {
+    width: 50%;
+  }
+  #homepage-nav ul {
+    margin: 0;
+  }
+  #homepage-nav a {
+    width: 24.66%;
+    border-width: 2.5px 1.5px;
+  }
+  #homepage-nav a:first-child {
+    border-left: 2.5px solid #2a2a2a;
+  }
+  #homepage-nav a:last-child {
+    border-right: 2.5px solid #2a2a2a;
+  }
+  /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
-@media print {
-  *, *::before, *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a, a:visited {
-    text-decoration: underline;
-  }
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-  /*
+  @media print {
+    *, *::before, *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a, a:visited {
+      text-decoration: underline;
+    }
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+    /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after, a[href^="javascript:"]::after {
-    content: "";
-  }
-  pre {
-    white-space: pre-wrap !important;
-  }
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  /*
+    a[href^="#"]::after, a[href^="javascript:"]::after {
+      content: "";
+    }
+    pre {
+      white-space: pre-wrap !important;
+    }
+    pre, blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+    /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-  thead {
-    display: table-header-group;
+    thead {
+      display: table-header-group;
+    }
+    tr, img {
+      page-break-inside: avoid;
+    }
+    p, h2, h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2, h3 {
+      page-break-after: avoid;
+    }
   }
-  tr, img {
-    page-break-inside: avoid;
-  }
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2, h3 {
-    page-break-after: avoid;
-  }
-}
