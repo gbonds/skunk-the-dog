@@ -318,8 +318,6 @@ main h1 {
   /* setting margin-bottom to 50 so it matches the space between h1/content-container and content-container/button */
 }
 
-
-
 /* WORKING
 .content-container p {
   max-width: 575px;
@@ -338,8 +336,8 @@ main h1 {
 .content-container li {
   list-style: disc outside;
   text-align: left;
-  width: 45%;
   margin: 10px 10px 10px 15px;
+  width: 100%;
 }
 
 button {
@@ -500,11 +498,11 @@ button {
     margin: 75px 150px;
     justify-content: flex-start;
   }
+  .content-container li {
+    width: 45%;
+  }
 
-
-
-
-/* WORKING 
+  /* WORKING 
 
   .content-container {
     flex-flow: row wrap;
@@ -533,8 +531,6 @@ copied from base styling
 }
 
 */
-
-
   h1 {
     font-size: 4em;
   }
