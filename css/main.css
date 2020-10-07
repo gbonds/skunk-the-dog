@@ -338,7 +338,8 @@ main h1 {
   width: 100%;
 }
 
-button {
+button,
+#contact-form-submit {
   width: 75%;
   max-width: 175px;
   margin: 25px 0;
@@ -350,6 +351,29 @@ button {
   font: 400 1.25em 'Roboto', sans-serif;
   border-radius: 4px;
 }
+
+.contact-form-container  {
+  width: 100%;
+}
+
+.contact-form-container form {
+  width: 100%;
+}
+
+.contact-form-item {
+  width: 90%;
+  margin: 10px;
+  padding: 5px;
+  line-height: 2;
+  font: 100 16px 'Roboto', sans-serif;
+  font-style: italic;
+}
+
+/*
+#contact-form-submit {
+  background-color: hsl(220, 100%, 70%);
+}
+*/
 
 /* ---------- Base Homepage Styles ---------- */
 
