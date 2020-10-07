@@ -308,15 +308,23 @@ main h1 {
   flex-flow: column wrap;
 }
 
+.content-item {
+  width: 90%;
+}
+
 .content-container img {
-  width: 80%;
+  width: 100%;
   margin-bottom: 50px;
   /* setting margin-bottom to 50 so it matches the space between h1/content-container and content-container/button */
 }
 
+
+
+/* WORKING
 .content-container p {
   max-width: 575px;
 }
+*/
 
 .content-container ul {
   display: flex;
@@ -494,12 +502,10 @@ button {
   }
 
 
-  .content-container {
-max-width: 700px;
-  }
 
 
 /* WORKING 
+
   .content-container {
     flex-flow: row wrap;
     align-items: flex-start;
@@ -511,6 +517,11 @@ max-width: 700px;
   .content-container ul {
     width: 45%;
   }
+
+  .content-container {
+max-width: 700px;
+  }
+
 
 copied from base styling
   .content-container {
