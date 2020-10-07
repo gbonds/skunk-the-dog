@@ -300,8 +300,38 @@ main h1 {
   margin-bottom: 25px;
 }
 
-.content-container, .header-content-container {
+.content-container {
   margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.content-container img {
+  width: 80%;
+  margin-bottom: 50px;
+  /* setting margin-bottom to 50 so it matches the space between h1/content-container and content-container/button */
+}
+
+.content-container p {
+  max-width: 575px;
+}
+
+.content-container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  width: 75%;
+  margin-left: 50px;
+}
+
+.content-container li {
+  list-style: disc outside;
+  text-align: left;
+  width: 45%;
+  margin: 10px 10px 10px 15px;
 }
 
 button {
@@ -326,6 +356,7 @@ button {
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  margin: 25px 0;
 }
 
 .homepage-content-container h1 {
@@ -443,8 +474,8 @@ button {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 1030px) {
-  /* NOTE set min-width to 1030px b/c homepage nav items weren't lining up in row between 768-1024px width */
+@media only screen and (min-width: 1024px) {
+  /* NOTE set min-width to 1024px b/c homepage nav items weren't lining up in row between 768-1024px width */
   /* Tablet Styles */
   /* ---------- Tablet Nav Styles ---------- */
   nav a {
@@ -461,9 +492,38 @@ button {
     margin: 75px 150px;
     justify-content: flex-start;
   }
+
+
   .content-container {
-    max-width: 700px;
+max-width: 700px;
   }
+
+
+/* WORKING 
+  .content-container {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    
+  }
+
+  .content-container img,
+  .content-container p
+  .content-container ul {
+    width: 45%;
+  }
+
+copied from base styling
+  .content-container {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+*/
+
+
   h1 {
     font-size: 4em;
   }
