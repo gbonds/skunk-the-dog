@@ -65,28 +65,22 @@
 
   <main>
     <h1>Contact</h1>
-    <div class="content-container">
-      <!-- wrapping contact form WITH button since it will not function like the other call-to-action buttons-->
-      <p>PLACEHOLDER FOR CONTACT FORM</p>
-      <button class="color-4">
-        Submit
-      </button>
-    </div> <!-- content-container ends -->
+    <!-- wrapping contact form WITH button since it will not function like the other call-to-action buttons-->
     <div class="content-container contact-form-container">
-        <form>
+      <form action="contact-form-handler.php">
 
-          <input type="text" class="contact-form-item" id="name" name="name" placeholder="Name" required>
-          <br>
+        <input type="text" class="contact-form-item" id="name" name="name" placeholder="Name" required>
+        <br>
 
-          <input type="text" class="contact-form-item" id="email" name="email" placeholder="Email Address" required>
-          <br>
+        <input type="text" class="contact-form-item" id="email" name="email" placeholder="Email Address" required>
+        <br>
 
-          <textarea class="contact-form-item" id="message" name="message" placeholder="Message" required></textarea>
-          <br>
+        <textarea class="contact-form-item" id="message" name="message" placeholder="Message" required></textarea>
+        <br>
 
-          <input type="submit" class="color-4" id="contact-form-submit" value="Submit">
+        <input type="submit" class="color-4" id="contact-form-submit" value="Submit">
 
-        </form>
+      </form>
     </div> <!-- content-container ends -->
   </main>
 

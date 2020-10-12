@@ -320,7 +320,7 @@ main h1 {
 .content-item img {
   width: 100%;
   margin-bottom: 50px;
-  /* setting margin-bottom to 50 so it matches the space between h1/content-container and content-container/button */
+  /* setting margin-bottom to 50 so it matches the space between h1/content-container and content-container/button */ 
 }
 
 .content-item ul {
