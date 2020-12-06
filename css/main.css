@@ -83,6 +83,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   /* ========== INDEX ========== */
+      /* 
+      Clearing Format Styles [My personal styling to clear default formatting]
+      Global Layout Styles
+      Typography & Coloring Styles
+      Base Nav Styles
+      Base Footer Styles
+      Base Homepage Styles
+      Base Pages Styles [About, Social, Work, Contact]
+      
+
+
 /* ----- Clearing Format Styles ----- */
 
 h1, h2, h3, h4, p, figure {
@@ -193,48 +205,43 @@ p {
 
 /* ---------- Base Nav Styles ---------- */
 
-nav ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+.nav-grid__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0px;
+  margin-bottom: 50px;
 }
 
-nav a {
-  /* breaking out border stylings below so I can specify width on top and sides */
-  border-width: 2.5px 1.5px;
-  border-style: solid;
-  border-color: #2a2a2a;
-  width: 25%;
-  min-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.nav-grid__item {
+  border: .5px solid black;
+  text-align: center;
+  height: 50px;
+  padding-top: 25px;
   font: 400 1em 'Roboto', sans-serif;
 }
 
-nav a:hover {
-  transform: scale(1.05, 1.25);
-  transition-duration: 0.2s;
+.nav-grid__item:first-child,
+.nav-grid__item:nth-child(2) {
+  border-bottom: none;
+  /* this prevents grid from having double borders */
+}
+
+.nav-grid__item:first-child,
+.nav-grid__item:nth-child(3) {
+  border-right: none;
+  /* this prevents grid from having double borders */
+}
+
+
+.nav-grid__item:hover {
+  transform: scale(1.025, 1.075);
+  transition-duration: 0.35s;
   border-radius: 2px;
   border: none;
-  /* TODO how can I remove border and transform element without affecting alignment of neighboring nav item? */
 }
 
-.border-heavy-left {
-  border-left: 2.5px solid #2a2a2a;
-}
 
-.border-heavy-right {
-  border-right: 2.5px solid #2a2a2a;
-}
-
-.border-light-bottom {
-  border-bottom: 1.5px solid #2a2a2a;
-}
-
-.border-light-top {
-  border-top: 1.5px solid #2a2a2a;
-}
 
 .home-link img {
   width: 85%;
@@ -257,7 +264,6 @@ nav a:hover {
 }
 
 /* ---------- Base Footer Styles ---------- */
-
 /* ----- See "Global Layout Styles" section for rules making footer stick to bottom ---- */
 
 footer {
@@ -295,10 +301,48 @@ footer .author-name a:active {
 
 /* TODO should I apply the link styling to all links? */
 
-/* ---------- Base Pages Styles ---------- */
+/* ---------- Base Homepage Styles ---------- */
 
-/* ---------- [About, Social, Work, Contact] 
-              Homepage Styles are farther below since it's more specific ---------- */
+.homepage-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin: 25px 0;
+}
+
+.homepage-content-container h1 {
+  font-size: 13vw;
+  text-align: center;
+  margin: 15px;
+}
+
+.homepage-content-container img {
+  width: 85%;
+  margin: 15px;
+}
+
+.homepage-content-container img:hover {
+  transform: scale(1.01) rotate(2deg);
+  transition-duration: 0.2s;
+}
+
+#homepage-nav {
+  margin-bottom: 75px;
+}
+
+#homepage-nav ul {
+  margin: 15px;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+#homepage-nav a {
+  width: 48%;
+}
+
+/* ---------- Base Pages Styles ---------- */
+/* ---------- [About, Social, Work, Contact]  ---------- */
 
 main h1 {
   margin-bottom: 25px;
@@ -375,47 +419,7 @@ button,
 }
 */
 
-/* ---------- Base Homepage Styles ---------- */
 
-/* ---------- Styling for all other pages is above ---------- */
-
-.homepage-content-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  margin: 25px 0;
-}
-
-.homepage-content-container h1 {
-  font-size: 13vw;
-  text-align: center;
-  margin: 15px;
-}
-
-.homepage-content-container img {
-  width: 85%;
-  margin: 15px;
-}
-
-.homepage-content-container img:hover {
-  transform: scale(1.01) rotate(2deg);
-  transition-duration: 0.2s;
-}
-
-#homepage-nav {
-  margin-bottom: 75px;
-}
-
-#homepage-nav ul {
-  margin: 15px;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-
-#homepage-nav a {
-  width: 48%;
-}
 
 /* ==========================================================================
    Helper classes

@@ -35,30 +35,30 @@
       <!-- TODO insert breaks here, have them not display in mobile, then display in desktop-->
       <img src="img/skunk_outdoors_01_headcrop.png" alt="Skunk the Dog's smiling face">
     </div>
-    <nav id="homepage-nav">
-      <ul>
-        <a href="about/index.html" class="color-1 border-heavy-left border-light-bottom">
-          <li>
-            about
-          </li>
-        </a>
-        <a href="social/index.html" class="color-2 border-heavy-right border-light-bottom">
-          <li>
-            social
-          </li>
-        </a>
-        <a href="work/index.html" class="color-3 border-heavy-left border-light-top">
-          <li>
-            work
-          </li>
-        </a>
-        <a href="contact/index.html" class="color-4 border-heavy-right border-light-top">
-          <li>
-            contact
-          </li>
-        </a>
-      </ul>
-    </nav>
+
+    <nav class="nav-grid__container">
+      <!-- nesting all grid-item divs inside of a so that whole div is clickable. -->
+      <a href="about/index.html">
+        <div class="nav-grid__item color-1">
+          about
+        </div>
+      </a>
+      <a href="social/index.html">
+        <div class="nav-grid__item color-2">
+          social
+        </div>
+      </a>
+      <a href="work/index.html">
+        <div class="nav-grid__item color-3">
+          work
+        </div>
+      </a>
+      <a href="contact/index.html">
+        <div class="nav-grid__item color-4">
+          contact
+        </div>
+      </a>
+    </nav> <!-- .grid-ctnr -->
   </header>
 
   <footer>
