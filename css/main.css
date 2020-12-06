@@ -393,7 +393,7 @@ main h1 {
   width: 100%;
 }
 
-button, #contact-form-submit {
+.button, #contact-form-submit {
   max-width: 175px;
   margin: 25px 0;
   padding: 10px;
