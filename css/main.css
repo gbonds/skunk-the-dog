@@ -96,8 +96,7 @@ textarea {
         Desktop Nav Styles
         Desktop Homepage Styles
         Desktop Pages Styles
-*/      
-
+*/
 
 /* ----- Clearing Format Styles ----- */
 
@@ -208,13 +207,35 @@ p {
 }
 
 /* ---------- Base Nav Styles ---------- */
-
-.nav-grid__container {
+.nav-grid {
   display: grid;
-  grid-template-columns: 50% 50%;
   grid-gap: 0px;
   margin-bottom: 50px;
+  /* separate styling for homepage and general pages below*/
 }
+
+    .home-nav-grid__container {
+      grid-template-columns: 50% 50%;
+    }
+
+    .home-nav-grid__container .mobile-top-row {
+      border-bottom: none
+      /* prevents grid from having double borders */
+    }
+
+    .home-nav-grid__container .mobile-left-column {
+      border-right: none;
+      /* prevents grid from having double borders */
+    }
+
+    .gen-nav-grid__container {
+      grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .gen-nav-grid__container .inner-column {
+      border-left: none;
+      /* prevents grid from having double borders */
+    }
 
 .nav-grid__item {
   border: .5px solid black;
@@ -222,16 +243,6 @@ p {
   height: 50px;
   padding-top: 25px;
   font: 400 1em 'Roboto', sans-serif;
-}
-
-.mobile-top-row {
-  border-bottom: none
-  /* this prevents grid from having double borders */
-}
-
-.mobile-left-column {
-  border-right: none;
-  /* this prevents grid from having double borders */
 }
 
 .nav-grid__item:hover {
@@ -324,20 +335,6 @@ footer .author-name a:active {
 .homepage-content-container img:hover {
   transform: scale(1.01) rotate(2deg);
   transition-duration: 0.2s;
-}
-
-#homepage-nav {
-  margin-bottom: 75px;
-}
-
-#homepage-nav ul {
-  margin: 15px;
-  justify-content: center;
-  flex-flow: row wrap;
-}
-
-#homepage-nav a {
-  width: 48%;
 }
 
 /* ---------- Base Pages Styles ---------- */
@@ -504,28 +501,28 @@ button, #contact-form-submit {
    ========================================================================== */
 
 @media only screen and (min-width: 1024px) {
-  
   /* ---------- Desktop Nav Styles ---------- */
-  .nav-grid__container {
-    grid-template-columns: 25% 25% 25% 25%;
-  }
   .nav-grid__item {
     font-size: 1.25em;
-    border: .5px solid black;
-    /* must set border again to override mobile-top-row and mobile-left-column border:none settings */
-  }
-  .desktop-inner-column {
-    border-left: none;
-    /* this prevents grid from having double borders */
   }
 
-  nav a {
-    font-size: 1.25em;
-  }
   .home-link img {
     width: 100%;
     margin: .75em 0 0 0;
   }
+
+  .home-nav-grid__container {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .home-nav-grid__container .nav-grid__item {
+    border: .5px solid black;
+    /* must set border again to override mobile-top-row and mobile-left-column border:none settings */
+  }
+  .home-nav-grid__container .inner-column {
+    border-left: none;
+    /* this prevents grid from having double borders */
+  }
+
   /* ---------- Desktop Homepage Styles ---------- */
   .homepage-content-container {
     display: flex;
@@ -581,7 +578,6 @@ button, #contact-form-submit {
   .content-item ul {
     margin-left: 75px;
   }
-  
   /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
