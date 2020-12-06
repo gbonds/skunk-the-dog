@@ -221,14 +221,12 @@ p {
   font: 400 1em 'Roboto', sans-serif;
 }
 
-.nav-grid__item:first-child,
-.nav-grid__item:nth-child(2) {
-  border-bottom: none;
+.mobile-top-row {
+  border-bottom: none
   /* this prevents grid from having double borders */
 }
 
-.nav-grid__item:first-child,
-.nav-grid__item:nth-child(3) {
+.mobile-left-column {
   border-right: none;
   /* this prevents grid from having double borders */
 }
@@ -240,8 +238,6 @@ p {
   border-radius: 2px;
   border: none;
 }
-
-
 
 .home-link img {
   width: 85%;
